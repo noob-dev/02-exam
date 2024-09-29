@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}H0M3{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Question Form</h1>
+</header>
+
+<main>
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            {{ form.name }} <br>
+
+            <label for="email">Email:</label>
+            {{ form.email }} <br>
+
+            <label for="question">Email:</label>
+            {{ form.question }}
+
+            <button type="submit" btn="">Submit</button>
+        </form>
+    </div>
+</main>
+
+{% endblock %}

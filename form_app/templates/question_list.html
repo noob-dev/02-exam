@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Questions List{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Questions List</h1>
+</header>
+
+<main>
+    <div class="container">
+        <ol>
+            {% for question in questions %}
+                <li>
+                    <strong>Name:</strong> {{ question.name }} <br>
+                    <strong>Email:</strong> {{ question.email }} <br>
+                    <strong>Question:</strong> {{ question.question }}
+                </li>
+            {% empty %}
+                <li>No questions have been submitted yet.</li>
+            {% endfor %}
+        </ol>
+    </div>
+</main>
+{% endblock %}

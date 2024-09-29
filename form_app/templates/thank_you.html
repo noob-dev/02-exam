@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Thank You{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Thank you for your submission!</h1>
+</header>
+
+<main>
+    <div class="btn-container">
+        <a href="{% url 'home' %}" class="btn btn-yes">Add a new question</a>
+        <a href="{% url 'question_list' %}" class="btn btn-no">View all questions</a>
+    </div>
+</main>
+{% endblock %}
